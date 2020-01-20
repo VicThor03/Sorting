@@ -27,6 +27,8 @@ stop_time = time.time()
 print(f"{(stop_time-start_time):.7f}")
 
 
+
 # Stampo la lista appena calcolata
 print("lista dopo:")
 print(mylist)
+assert mylist==sorted(mylist)
