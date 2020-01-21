@@ -2,15 +2,15 @@ from timeit import time
 from random import randrange
 
 # Lista di partenza da ordinare
-mylist = [randrange(10000) for _ in range(1000)]
+mylist = [randrange(1000) for _ in range(10)]
 
 # Algoritmo di ordinamento
 print("lista prima:")
 print(mylist)
-start_time = time.time()
 
 # Scrivere qui l'algoritmo di Bubble Sort
 def bubbleSort(mylist):
+    start_time = time.time()
     for idx in range(len(mylist)-1,0,-1):
         for i in range(idx):
             if mylist[i]>mylist[i+1]:
@@ -18,13 +18,9 @@ def bubbleSort(mylist):
                 mylist[i] = mylist[i+1]
                 mylist[i+1] = temp
 
-mylist = [14,46,43,27,57,41,845,21,70]
+    stop_time = time.time()
+    print(f"{(stop_time-start_time):.7f}")
 bubbleSort(mylist)
-print(mylist)
-
-
-stop_time = time.time()
-print(f"{(stop_time-start_time):.7f}")
 
 
 
